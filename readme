@@ -1,0 +1,83 @@
+
+Barcode Detection and Extraction from PDF
+Overview
+This project extracts barcodes from a multi-page PDF document using a YOLO-based object detection model. The process includes converting the PDF pages to images, detecting barcodes, cropping them, rotating them if necessary, and saving them as separate images.
+
+
+
+
+
+
+
+
+Requirements
+Python 3.x
+Ultralytics YOLO: For object detection.
+PyMuPDF (fitz): For PDF to image conversion.
+Pillow (PIL): For image manipulation.
+NumPy: For array operations.
+
+
+
+
+
+
+
+You can install the required packages using pip:
+
+                 pip install ultralytics PyMuPDF Pillow numpy
+
+
+
+
+
+
+Code Description
+Imports and Path Setup
+Ultralytics YOLO: Used for barcode detection.
+PyMuPDF: Converts PDF pages to images.
+Pillow: Handles image operations.
+NumPy: Manages image data in array format.
+Paths are set for the PDF file and output directory:
+
+
+
+
+
+pdf_path: Path to the input PDF file.
+output_dir: Directory where extracted barcode images will be saved.
+Model Loading
+The YOLO model is loaded using the provided weights.
+
+
+
+
+
+PDF to Image Conversion and Barcode Detection
+Convert PDF pages to images: Each page of the PDF is converted into an image using PyMuPDF.
+Detect barcodes: The YOLO model is used to detect barcodes in the images.
+Crop and save barcode images: Detected barcode regions are cropped and saved as separate images in the output directory.
+Rotate barcodes: If a barcode is vertically oriented, it is rotated to ensure it is horizontal for better readability.
+Completion
+A message is printed once the barcode detection and extraction process is completed.
+
+
+
+
+
+
+
+
+Usage
+Place your PDF file named screenshot.pdf in the same directory as the script.
+Ensure the YOLO model weights are available.
+Run the script using Python:
+bash
+Copy code
+python script_name.py
+Detected barcode images will be saved in the temp_barcodes directory.
+Notes
+Ensure that the PDF file and model weights are correctly named and located in the specified paths.
+The code rotates barcodes to ensure they are horizontally oriented for better readability.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
