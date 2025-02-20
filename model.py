@@ -6,7 +6,7 @@ import numpy as np
 
 # Paths
 # model_path = 'best.pt'  # Ensure this is a simple string, not a tuple
-pdf_path = 'Catalog (230 pages) .pdf'
+pdf_path = 'emdcatalog (1).pdf'
 output_dir = 'temp_barcodes'
 
 # Ensure output directory exists

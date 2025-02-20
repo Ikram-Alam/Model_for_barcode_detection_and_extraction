@@ -3,7 +3,7 @@ import easyocr
 import re
 
 # Load image
-image_path = '251EB9E2-0D10-46E5-A0E4-4ED0FA91A373.png'
+image_path = 'Cap.PNG'
 image = cv2.imread(image_path)
 
 # Convert to grayscale for better OCR results
